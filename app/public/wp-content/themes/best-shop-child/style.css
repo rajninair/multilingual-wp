@@ -1,0 +1,275 @@
+/*
+CTC Separate Stylesheet
+Updated: 2025-04-25 14:10:05
+Theme Name: Best Shop Child
+Theme URI: https://www.gradientthemes.com/product/wordpress-shopping-cart-theme/
+Template: best-shop
+Author: gradientthemes
+Author URI: https://gradientthemes.com/
+Description: Best Shop is a fast, clean, widgetized and modern responsive free WooCommerce WordPress theme. The theme supports popular page builders like Elementor, KingComposer, Beaver Builder, SiteOrigin, Thrive Architect, Divi, Brizy, Visual Composer, etc. The theme has built in WooCommerce product widgets like product category lists/grids, product sliders, post sliders, category showcase etc. Therefore you can create product pages easily without referring to complex shortcodes. Best Shop is compatible with YITH WooCommerce Wishlist, YITH WooCommerce Compare, YITH WooCommerce Quick view, WooCommerce Variation Swatches and most of the popular plugins. The theme is SEO friendly, WPML and RTL ready. See documentation:-https://wordpress.gradientthemes.com
+Tags: blog,one-column,two-columns,three-columns,right-sidebar,left-sidebar,grid-layout,sticky-Post,footer-widgets,custom-background,custom-header,custom-colors,custom-logo,custom-menu,featured-images,threaded-comments,translation-ready,full-width-template,rtl-language-support,theme-options,e-commerce,food-and-drink
+Version: 1.5.2.1745590205
+*/
+
+/* Header Styles */
+.site-header {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 999;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.site-branding {
+    display: flex;
+    align-items: center;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.site-description {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Language Switcher */
+.language-switcher {
+    margin-left: 20px;
+    position: relative;
+}
+
+.language-switcher select {
+    padding: 8px 30px 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 14px;
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 8px) center;
+    min-width: 120px;
+}
+
+.language-switcher select:hover {
+    border-color: #999;
+}
+
+.language-switcher select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+/* Navigation */
+.main-navigation {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.main-navigation ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navigation li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.main-navigation a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.main-navigation a:hover,
+.main-navigation .current-menu-item > a {
+    color: #007bff;
+}
+
+/* Sub-menu styles */
+.main-navigation .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 999;
+}
+
+.main-navigation .menu-item-has-children:hover > .sub-menu {
+    display: block;
+}
+
+.main-navigation .sub-menu li {
+    margin: 0;
+    width: 100%;
+}
+
+.main-navigation .sub-menu a {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.main-navigation .sub-menu a:hover {
+    background: #f8f9fa;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-navigation {
+        width: 100%;
+        margin: 10px 0 0;
+    }
+
+    .main-navigation ul {
+        display: none;
+        width: 100%;
+    }
+
+    .main-navigation.toggled ul {
+        display: block;
+    }
+
+    .main-navigation li {
+        margin: 0;
+        width: 100%;
+    }
+
+    .main-navigation .sub-menu {
+        position: static;
+        box-shadow: none;
+        padding-left: 15px;
+    }
+
+    .main-navigation .menu-item-has-children:hover > .sub-menu {
+        display: none;
+    }
+
+    .main-navigation .sub-menu.toggled {
+        display: block;
+    }
+
+    .sub-menu-toggle {
+        background: none;
+        border: none;
+        padding: 5px 10px;
+        position: absolute;
+        right: 0;
+        top: 5px;
+        cursor: pointer;
+    }
+
+    .sub-menu-toggle::before {
+        content: '+';
+        font-size: 20px;
+    }
+
+    .sub-menu-toggle.active::before {
+        content: '-';
+    }
+
+    .header-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .site-branding {
+        flex: 1;
+    }
+}
+
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    background-color: #f1f1f1;
+    color: #21759b;
+    padding: 8px;
+    z-index: 100000;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Video Background Styles */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Ensure content remains visible over video */
+#page {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .video-background.hide-on-mobile {
+        display: none;
+    }
+}
+

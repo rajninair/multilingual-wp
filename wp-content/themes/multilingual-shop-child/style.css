@@ -1,0 +1,17 @@
+/*
+Theme Name: Multilingual Shop Child
+Theme URI: 
+Description: Child theme for multilingual e-commerce site
+Author: Your Name
+Author URI: 
+Template: twentytwentyfour
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: multilingual-shop-child
+*/
+
+/* Import parent theme styles */
+@import url("../twentytwentyfour/style.css");
+
+/* Custom styles will be added here */ 
